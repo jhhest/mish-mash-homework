@@ -1,11 +1,11 @@
 const groupAdultsByAgeRange = require("./transform");
 
 const examplePeopleData = [
-    { name: "pete", age: 10 },
-    { name: "dove", age: 17 },
-    { name: "dave", age: 18 },
-    { name: "hall", age: 19 },
-    { name: "donn", age: 20 },
+    // { name: "pete", age: 10 },
+    // { name: "dove", age: 17 },
+    // { name: "dave", age: 18 },
+    // { name: "hall", age: 19 },
+    // { name: "donn", age: 20 },
     { name: "trey", age: 21 },
     { name: "hann", age: 29 },
     { name: "chew", age: 30 },
@@ -19,7 +19,6 @@ const examplePeopleData = [
     { name: "bert", age: 52 },
     { name: "oldd", age: 120 },
   ];
-groupAdultsByAgeRange(examplePeopleData)
 
 console.log(groupAdultsByAgeRange(examplePeopleData))
 

@@ -1,28 +1,30 @@
-function groupAdultsbyRange(people) {
-  const categories = {
-    "20 and younger": [],
-    "21-30": [],
-    "31-40": [],
-    "41-50": [],
-    "51 and older": []
-  };
-  // const result = (people) => {
-  //     return "test"
-  // };
-  const result = people.reduce(function(acc, cv) {
-    if (cv.age <= 20) {
-      categories["20 and younger"].push(cv);
-    } else if (cv.age > 21 && cv.age <= 30) {
-      categories["21-30"].push(cv);
-    } else if (cv.age > 31 && cv.age <= 40) {
-      categories["41-50"].push(cv);
-    } else {
-      categories["51 and older"].push(cv);
-    }
-  }, categories);
-  console.log("result:\n", result);
-  console.log("categories:\n", categories);
-  return categories;
-}
+const categories = {
+  "20 and younger": [],
+  "21-30": [],
+  "31-40": [],
+  "41-50": [],
+  "51 and older": []
+};
+const groupAdultsByAgeRange = adults =>
+  adults
+    .reduce((acc, item) => {
+      if (item.age <= 20) {
+        console.log("push the itemmmm");
+        acc["20 and younger"].push(item);
+      }
+      if (item.age > 20 && item.age <= 30) {
+        acc["21-30"].push(item);
+      }
+      if (item.age > 31 && item.age <= 40) {
+        acc["31-40"].push(item);
+      }
+      if (item.age > 41 && item.age <= 50) {
+        acc["41-50"].push(item);
+      }
+      if (item.age > 50) {
+        acc["51 and older"].push(item);
+      }
+      return acc;
+    }, categories)
 
-module.exports = groupAdultsbyRange;
+module.exports = groupAdultsByAgeRange;
