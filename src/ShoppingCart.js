@@ -25,4 +25,4 @@ class ShoppingCart {
   }
 }
 
-module.exports.ShoppingCart = ShoppingCart;
+module.exports = ShoppingCart;
